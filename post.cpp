@@ -62,13 +62,12 @@ void loop()
   // Make request each 5 seconds
 
   HTTPClient http;
-  WiFiClient client;
 
   // This value can come from a sensor
   String value = "Hello. This is a post request";
   String another_value = "Hello world! :)";
   String full_url = SERVER_ADDRESS + "/save_data_post.php";
-  http.begin(client, full_url);
+  http.begin(full_url);
 
   // Make request
   Serial.println("Making request to " + full_url);

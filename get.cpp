@@ -62,13 +62,12 @@ void loop()
   // Make request each 5 seconds
 
   HTTPClient http;
-  WiFiClient client;
 
   // This value can come from a sensor
   String value = "Hello+from+ESP8266!";
   String another_value = "This+is+another+value";
   String full_url = SERVER_ADDRESS + "/save_data.php?value=" + value + "&another_value=" + another_value;
-  http.begin(client, full_url);
+  http.begin(full_url);
 
   // Make request
   Serial.println("Making request to " + full_url);
